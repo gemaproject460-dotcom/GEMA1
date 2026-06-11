@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEMA</title>
+
+    <!-- CONEXIÓN CSS -->
+    <link rel="stylesheet" href="index.css">   <!-- Unir con el css -->
+
+    <!-- ICONOS -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+ <body>
+
+    <!-- CONTENEDOR -->
+    <div class="contenedor">
+
+        <!-- HEADER -->
+       <header class="header">
+
+    <!-- LOGO -->
+    <div class="logo-box">
+
+        <img src="Imagenes/LOGO.png" alt="logo">
+
+        <div class="logo-texto">
+            <h1>GEMA</h1>
+            <p>
+                GLOBAL EMERGENCY <br>
+                MANAGEMENT ACCESS
+            </p>
+
+
+    
+
+        </div>
+
+    </div>
+
+    <!-- NAVBAR -->
+   <!-- NAVBAR -->
+<nav class="navbar">
+
+    <a href="inde" class="active">INICIO</a>
+
+    <!-- DROPDOWN -->
+    <div class="dropdown">
+
+        <button class="dropbtn">
+          GEMAS
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="dropdown-content">
+            <a href="informacion.html">Información</a>
+            <a href="niños.html">Niños</a>
+            <a href="capacitaciones.html">Capacitaciones</a>
+            <a href="productos.html">Productos</a>
+        </div>
+
+    </div>
+
+    <a href="#">MIS RECURSOS </a>
+    <a href="#">DATOS DEL PAÍS</a>
+
+
+        <!-- ICONOS -->
+        <div class="icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-bell"></i>
+        </div>
+
+    </nav>
+
+</header>
+
+       
+        <section class="hero">
+
+            <div class="hero-texto">
+
+                <h2>ESTAMOS AQUÍ <br> PARA AYUDAR</h2> 
+                <p>
+                    Trabajamos junto a nuestra comunidad
+                    para promover, mejorar y mantener
+                    una cultura de preparación para desastres.
+                </p>
+
+                <a href="informacion.html" class="btn">
+                    CONOCE MÁS 
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+       
+
+        
+        <section class="cards"> 
+            <div class="card">
+                <a href="informacion.html" class="lineabotones">
+                <i class="fa-solid fa-circle-info"></i>
+                <h3>INFORMACIÓN</h3>
+                <p> ¿Qué es GEMA?
+                </p>
+                </a>
+            </div>
+
+            <div class="card">
+                 <a href="niños.html" class="lineabotones">
+                <i class="fa-solid fa-children"></i>
+                <h3>NIÑOS</h3>
+                <p>Información y aprendizaje</p>
+                 </a>
+            </div>
+
+            <div class="card">
+                 <a href="capacitaciones.html" class="lineabotones">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>CAPACITACIONES</h3>
+                <p>Cursos y simulacros</p>
+            </a>
+            </div>
+
+            <div class="card">
+                <a href="productos.html" class="lineabotones">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h3>PRODUCTOS</h3>
+                <p>Tienda online</p>
+                </a>
+             </div>
+
+        </section>
+
+    </div>
+
+<!-- Contenedor principal que guarda todas las tarjetas -->
+<div class="emergencia-grid">
+
+    <!-- Tarjeta 1 -->
+    <div class="emergencia-box verde">
+
+        <!-- Título de la tarjeta -->
+        <h3>EMERGENCIAS NATURALES</h3>
+
+        <!-- Lista de elementos -->
+        <ul>
+
+            <!-- Elemento de la lista -->
+            <li>Inundación</li>
+
+            <!-- Elemento de la lista -->
+            <li>Sismos</li>
+
+            <!-- Elemento de la lista -->
+            <li>Abejas</li>
+
+            <!-- Elemento de la lista -->
+            <li>Derrumbes</li>
+
+            <!-- Elemento de la lista -->
+            <li>Terremotos</li>
+
+        </ul>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="emergencia-box rojo">
+
+        <!-- Título -->
+        <h3>EMERGENCIAS URBANAS</h3>
+
+        <!-- Lista -->
+        <ul>
+
+            <li> Incendios</li>
+            <li> Explosiones</li>
+            <li> Accidentes</li>
+            <li> ¿A quién llamar?</li>
+            <li> Fuga de gas</li>
+
+        </ul>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="emergencia-box azul">
+
+        <!-- Título -->
+        <h3>PREVENCIÓN Y EDUCACIÓN</h3>
+
+        <!-- Lista -->
+        <ul>
+
+            <li>Primeros auxilios</li>
+            <li> Simulacros</li>
+            <li> Preparación familiar</li>
+            <li> Consejos</li>
+
+        </ul>
+    </div>
+     
+        <!-- DONAR SANGRE --> 
+        <div class="donar-box">
+    
+            <i class="fa-solid fa-droplet"></i>
+
+            <h3>¿DESEAS DONAR SANGRE?</h3>
+
+
+            <a href="sangre.html" class="btn-donar">
+                MÁS INFORMACIÓN    
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MAPA INTERACTIVO -->      
+<section class="mapa-section">
+
+    <!-- MAPA IZQUIERDA -->
+    <div class="mapa-box">
+
+        <iframe
+            src="https://www.google.com/maps?q=Panama&output=embed"
+            width="100%"
+            height="250"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+
+    </div>
+
+    <!-- TEXTO DERECHA -->    
+    <div class="mapa-info">
+
+        <h3>MAPA INTERACTIVO</h3>
+
+        <p>
+            Encuentra hospitales, estaciones de emergencia,
+            refugios temporales y rutas seguras cerca de ti.
+        </p>
+
+        <a href="mapa.html" class="btn-mapa">
+            VER MAPA
+        </a>
+
+    </div>
+
+</section>
+
+<!-- NÚMEROS DE EMERGENCIA -->        
+<section class="numeros-emergencia">
+
+    <h2>NÚMEROS DE EMERGENCIA</h2>
+<a href="https://sume911.pa/" class="linkbotones"> <!--Elimina la linea que aparece al linkear el botón con el href-->
+    <div class="numeros-grid">    <!--clase de todos los botones de numeros de emergencias-->
+        <div class="numero-card">
+            <i class="fa-solid fa-truck-medical"></i>
+            <h3>AMBULANCIA</h3>
+            <p>911</p>  
+        </div>
+    </a>
+
+        <div class="numero-card">
+            <a href="https://www.bomberos.gob.pa/" class="linkbotones">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+            <h3>BOMBEROS</h3>
+            <p>103</p>
+            </a>               <!--por el "</a>" antes de el "</div>" que cierra el number card-->
+        </div>
+        
+
+        <div class="numero-card">
+            <a href="https://www.policia.gob.pa/" class="linkbotones">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>POLICÍA</h3>
+            <p>104</p>
+            </a>
+        </div>
+
+        <div class="numero-card">
+            <a href="https://www.sinaproc.gob.pa/" class="linkbotones">
+            <i class="fa-solid fa-house-flood-water"></i>
+            <h3>SINAPROC</h3>
+            <p>520-4426</p>
+            </a>
+        </div>
+
+    </div>
+
+</section>
+</body>
+
+<!-- FOOTER --> 
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <!-- LOGO -->
+        <div class="footer-box">
+            <h3>GEMA</h3>
+            <p>
+                Global Emergency Management Access.
+                Preparación, prevención y apoyo
+                en situaciones de emergencia.
+            </p>
+        </div>
+
+        <!-- ENLACES -->
+        <div class="footer-box">
+            <h3>ENLACES</h3>
+
+            <a href="#">Inicio</a>
+            <a href="#">Recursos</a>
+            <a href="#">Capacitaciones</a>
+            <a href="#">Mapa interactivo</a>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="footer-box">
+            <h3>CONTACTO</h3>
+
+            <p>Email: contacto@gema.org</p>
+            <p>Tel: +507 6000-0000</p>
+            <p>Panamá</p>
+        </div>
+
+        <!-- REDES -->
+        <div class="footer-box">
+            <h3>SÍGUENOS</h3>
+
+            <div class="footer-redes">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- PARTE INFERIOR -->
+    <div class="footer-bottom">
+        <p>© 2026 GEMA - Todos los derechos reservados</p>
+    </div>
+
+</footer>
+
+</html>

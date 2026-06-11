@@ -1,0 +1,76 @@
+/* ================= HEADER ================= */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#022b68;
+    padding:18px 30px;
+}
+
+/* LOGO */
+
+.logo-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-box img{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo-texto h1{
+    color:white;
+    font-size:42px;
+}
+
+.logo-texto p{
+    color:white;
+    font-size:15px;
+    line-height:1.4;
+}
+
+/* NAV */
+
+.nav{
+    background:#d81f26;
+    padding:20px 30px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    border-radius:3px;
+}
+
+.nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:15px;
+    position:relative;
+}
+.nav a:hover{
+    opacity:0.8;
+}
+
+.nav .activo::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    width:100%;
+    height:3px;
+    background:white;
+}
+
+/* ICONOS */
+
+.iconos{
+    display:flex;
+    gap:20px;
+    color:white;
+    font-size:22px;
+    margin-left:10px;
+}

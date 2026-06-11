@@ -1,0 +1,109 @@
+/* Estilos generales de la página */
+body{
+
+    /* Color de fondo */
+    background:#f5f5f5;
+
+    /* Tipo de letra */
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/* Contenedor de las tarjetas */
+.contenedor{
+
+    /* Coloca las tarjetas una al lado de otra */
+    display:flex;
+
+    /* Espacio entre tarjetas */
+    gap:20px;
+
+    /* Centra horizontalmente */
+    justify-content:center;
+
+    /* Margen superior */
+    margin-top:40px;
+}
+
+
+/* Diseño general de cada tarjeta */
+.card{
+
+    /* Fondo blanco */
+    background:white;
+
+    /* Ancho de la tarjeta */
+    width:250px;
+
+    /* Bordes redondeados */
+    border-radius:10px;
+
+    /* Sombra */
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+
+    /* Oculta elementos que sobresalen */
+    overflow:hidden;
+}
+
+
+/* Estilo de los títulos */
+.card h3{
+
+    /* Color del texto */
+    color:white;
+
+    /* Centra el texto */
+    text-align:center;
+
+    /* Espaciado interno */
+    padding:12px;
+
+    /* Tamaño de letra */
+    font-size:18px;
+
+    /* Elimina margen */
+    margin:0;
+}
+
+
+/* Color verde del encabezado */
+.verde h3{
+    background:green;
+}
+
+
+/* Color rojo del encabezado */
+.roja h3{
+    background:red;
+}
+
+
+/* Color azul del encabezado */
+.azul h3{
+    background:blue;
+}
+
+
+/* Estilos de la lista */
+.card ul{
+
+    /* Quita los puntos de lista */
+    list-style:none;
+
+    /* Espaciado interno */
+    padding:20px;
+
+    /* Elimina margen */
+    margin:0;
+}
+
+
+/* Estilo de cada elemento de la lista */
+.card ul li{
+
+    /* Espacio entre elementos */
+    margin:15px 0;
+
+    /* Tamaño de texto */
+    font-size:16px;
+}

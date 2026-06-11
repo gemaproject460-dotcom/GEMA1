@@ -1,0 +1,164 @@
+/* ================= FUENTE ================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* ================= RESET ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* ================= CUERPO GENERAL ================= */
+body{
+  font-family:'Montserrat', sans-serif;
+  background:#ffffff;
+  color:#0b2349;
+  line-height:1.6;
+}
+
+/* ================= HEADER ================= */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#022b68;
+    padding:18px 30px;
+}
+
+/* LOGO */
+
+.logo-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-box img{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo-texto h1{
+    color:white;
+    font-size:42px;
+}
+
+.logo-texto p{
+    color:white;
+    font-size:15px;
+    line-height:1.4;
+}
+
+/* NAV */
+
+.nav{
+    background:#d81f26;
+    padding:20px 30px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    border-radius:3px;
+}
+
+.nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:15px;
+    position:relative;
+}
+.nav a:hover{
+    opacity:0.8;
+}
+
+.nav .activo::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    width:100%;
+    height:3px;
+    background:white;
+}
+
+/* ICONOS */
+
+.iconos{
+    display:flex;
+    gap:20px;
+    color:white;
+    font-size:22px;
+    margin-left:10px;
+}
+
+/* ================= CONTENIDO ================= */
+main{
+  max-width:1100px;
+  margin:40px auto;
+  padding:0 20px;
+}
+
+/* cajas de cada sección */
+section{
+  background:white;
+  padding:35px;
+  margin-bottom:30px;
+  border-radius:12px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* títulos de sección */
+section h2{
+  font-size:32px;
+  margin-bottom:20px;
+  border-left:6px solid #c1272d;
+  padding-left:12px;
+}
+
+/* párrafos */
+section p{
+  margin-bottom:15px;
+  text-align:justify;
+  font-size:17px;
+}
+
+/* listas */
+ul{
+  padding-left:25px;
+}
+
+li{
+  margin-bottom:12px;
+  font-size:17px;
+}
+
+/* color de viñetas */
+li::marker{
+  color:#c1272d;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+
+  header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+  }
+
+  nav{
+    width:100%;
+  }
+
+  nav a{
+    font-size:14px;
+    padding:8px 12px;
+  }
+
+  section h2{
+    font-size:24px;
+  }
+
+}

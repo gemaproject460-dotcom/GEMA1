@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Rompecabezas Emergencias</title>
+
+<style>
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #f5f6fa;
+}
+
+/* tablero */
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 5px;
+    margin: auto;
+    width: fit-content;
+    border: 3px solid #0a3d62;
+}
+
+/* piezas */
+.pieza {
+    width: 120px;
+    height: 120px;
+    background-size: 360px 360px;
+    border: 1px solid #ccc;
+    cursor: grab;
+}
+
+/* zona de piezas */
+.piezas-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* timer */
+.timer {
+    font-size: 30px;
+    color: red;
+    margin: 20px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>ROMPECABEZAS</h1>
+<div class="timer" id="timer">01:00</div>
+
+<div id="tablero" class="tablero"></div>
+
+<div class="piezas-container" id="piezas"></div>
+
+<button onclick="reiniciar()">Reiniciar</button>
+
+<script>
+const filas = 3;
+const columnas = 3;
+let tiempo = 60;
+let intervalo;
+
+/* imagen (puedes cambiarla) */
+const imagen = "IMG/BOMBEROSROMPECABEZAS.png";
+
+/* crear tablero vacío */
+const tablero = document.getElementById("tablero");
+const piezasContainer = document.getElementById("piezas");
+
+function iniciarJuego() {
+    tablero.innerHTML = "";
+    piezasContainer.innerHTML = "";
+
+    let piezas = [];
+
+    for (let i = 0; i < filas * columnas; i++) {
+        let pieza = document.createElement("div");
+        pieza.classList.add("pieza");
+
+        let x = i % columnas;
+        let y = Math.floor(i / columnas);
+
+        pieza.style.backgroundImage = `url(${imagen})`;
+        pieza.style.backgroundPosition = `-${x * 120}px -${y * 120}px`;
+
+        pieza.dataset.correct = i;
+
+        pieza.draggable = true;
+
+        pieza.addEventListener("dragstart", dragStart);
+
+        piezas.push(pieza);
+
+        /* crear casillas */
+        let celda = document.createElement("div");
+        celda.classList.add("pieza");
+        celda.style.background = "#dcdde1";
+        celda.dataset.index = i;
+
+        celda.addEventListener("dragover", dragOver);
+        celda.addEventListener("drop", drop);
+
+        tablero.appendChild(celda);
+    }
+
+    /* mezclar piezas */
+    piezas.sort(() => Math.random() - 0.5);
+
+    piezas.forEach(p => piezasContainer.appendChild(p));
+
+    iniciarTiempo();
+}
+
+/* drag and drop */
+let piezaSeleccionada = null;
+
+function dragStart() {
+    piezaSeleccionada = this;
+}
+
+function dragOver(e) {
+    e.preventDefault();
+}
+
+function drop() {
+    if (!this.hasChildNodes()) {
+        this.appendChild(piezaSeleccionada);
+        verificar();
+    }
+}
+
+/* verificar victoria */
+function verificar() {
+    let correcto = 0;
+    let celdas = tablero.children;
+
+    for (let i = 0; i < celdas.length; i++) {
+        let pieza = celdas[i].firstChild;
+        if (pieza && pieza.dataset.correct == i) {
+            correcto++;
+        }
+    }
+
+    if (correcto === filas * columnas) {
+        clearInterval(intervalo);
+        alert("🎉 ¡Completaste el rompecabezas!");
+    }
+}
+
+/* timer */
+function iniciarTiempo() {
+    tiempo = 60;
+    actualizarTimer();
+
+    intervalo = setInterval(() => {
+        tiempo--;
+        actualizarTimer();
+
+        if (tiempo <= 0) {
+            clearInterval(intervalo);
+            alert("⏰ Tiempo terminado!");
+        }
+    }, 1000);
+}
+
+function actualizarTimer() {
+    let min = String(Math.floor(tiempo / 60)).padStart(2, '0');
+    let sec = String(tiempo % 60).padStart(2, '0');
+    document.getElementById("timer").textContent = `${min}:${sec}`;
+}
+
+/* reiniciar */
+function reiniciar() {
+    clearInterval(intervalo);
+    iniciarJuego();
+}
+
+/* iniciar */
+iniciarJuego();
+</script>
+
+</body>
+</html>

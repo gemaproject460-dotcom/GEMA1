@@ -1,0 +1,755 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#e9e9e9;
+    padding:30px;
+     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+    width:100%;
+    margin:auto;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+/* HEADER */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#022b68;
+    padding:18px 30px;
+}
+
+/* LOGO */
+
+.logo-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-box img{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo-texto h1{
+    color:white;
+    font-size:42px;
+}
+
+.logo-texto p{
+    color:white;
+    font-size:15px;
+    line-height:1.4;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#022b68;
+
+    padding:18px 30px;
+}
+
+/* NAVBAR */
+.navbar{
+    background:#e31c23;
+
+    display:flex;
+    align-items:center;
+
+    gap:30px;
+
+    padding:18px 30px;
+
+    border-radius:10px;
+}
+
+/* LINKS */
+.navbar a{
+    color:rgb(0, 17, 112);
+
+    text-decoration:none;
+
+    font-size:17px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+/* HOVER */
+.navbar a:hover{
+    opacity:.8;
+}
+
+/* ACTIVO */
+.active{
+    border-bottom:3px solid rgb(255, 255, 255);
+    padding-bottom:5px;
+}
+
+/* DROPDOWN */
+.dropdown{
+    position:relative;
+    display: flex;
+    align-items: center;
+}
+
+/* BOTÓN */
+.dropbtn{
+    background:none;
+    border:none;
+
+    color:rgb(255, 255, 255);
+
+    font-size:17px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+/* MENÚ */
+.dropdown-content{
+    display:none;
+
+    position:absolute;
+
+    top:100%;   /* PEGA el menú justo debajo */
+    left:0;
+
+    margin-top:0; /* evita espacios */
+
+    background:rgb(255, 255, 255);
+
+    min-width:220px;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    z-index:1000;
+}
+
+
+
+/* LINKS MENÚ */
+.dropdown-content a{
+    display:block;
+
+    padding:14px 18px;
+
+    color:#002f70;
+
+    font-size:15px;
+}
+
+/* HOVER MENÚ */
+.dropdown-content a:hover{
+    background:#000000;
+}
+
+/* MOSTRAR */
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+/* ICONOS */
+.icons{
+    display:flex;
+    gap:18px;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    height:600px;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url( "Imagenes/Primer\ imagen\ png.png" );
+  
+    /* Ajusta la imagen para cubrir todo el contenedor */
+
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding: 80px;
+}
+
+/* TEXTO HERO */
+
+.hero-texto{
+    color:white;
+    max-width:500px;
+}
+
+.hero-texto h2{
+    font-size:65px;
+    line-height:1;
+    margin-bottom:20px;
+    font-weight:900;
+}
+
+.hero-texto p{
+    font-size:23px;
+    line-height:1.5;
+    margin-bottom:30px;
+}
+
+/* BOTÓN */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+
+    background:#0c47a1;
+    color:white;
+
+    padding:15px 30px;
+
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#08306d;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:25px;
+    background:#f5f5f5;
+}
+.card{
+    background:white;
+    padding:35px 20px;
+
+    text-align:center;
+
+    border-radius:10px;
+    border:1px solid #ddd;
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card i{
+    font-size:55px;
+    color:#003d9a;
+    margin-bottom:20px;
+    
+}
+
+.card h3{
+    color:#003d9a;
+    margin-bottom:10px;
+    font-size:24px;
+}
+
+.card p{
+    color:#555;
+    line-height:1.5;
+}
+
+
+
+
+
+
+/* BOTÓN DONAR SANGRE */
+
+.donar-box{
+    background:white;
+    border:2px solid #eee;
+    border-radius:10px;
+    text-align:center;
+    padding:30px 20px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+/* =========================
+   SECCIÓN EMERGENCIAS
+========================= */
+
+/* Contenedor de todas las tarjetas */
+.emergencia-grid{
+
+    /* Coloca las cajas una al lado de otra */
+    display: flex;
+
+    /* Espacio entre cajas */
+    gap: 20px;
+
+    /* Centra las cajas */
+    justify-content: center;
+
+    /* Espacio arriba */
+    margin-top: 40px;
+
+    /*Espacio abajo */
+    margin-bottom: 40px;
+}
+
+
+/* Diseño general de cada caja */
+.emergencia-box{
+
+    /* Fondo blanco */
+    background: white;
+
+    /* Ancho */
+    width: 250px;
+
+    /* Bordes redondos */
+    border-radius: 10px;
+
+    /* Sombra */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+    /* Oculta sobrantes */
+    overflow: hidden;
+
+}
+
+
+/* Títulos */
+.emergencia-box h3{
+
+    /* Color del texto */
+    color: white;
+
+    /* Centrado */
+    text-align: center;
+
+    /* Espaciado interno */
+    padding: 12px;
+
+    /* Tamaño del texto */
+    font-size: 18px;
+
+    /* Quita margen */
+    margin: 0;
+}
+
+
+/* Caja verde */
+.verde h3{
+    background: green;
+}
+
+
+/* Caja roja */
+.rojo h3{
+    background: red;
+}
+
+
+/* Caja azul */
+.azul h3{
+    background: blue;
+}
+
+
+/* Lista */
+.emergencia-box ul{
+
+    /* Quita puntitos */
+    list-style: none;
+
+    /* Espaciado interno */
+    padding: 20px;
+
+    /* Quita margen */
+    margin: 0;
+}
+
+
+/* Elementos de la lista */
+.emergencia-box ul li{
+
+    /* Espacio entre elementos */
+    margin: 15px 0;
+
+    /* Tamaño del texto */
+    font-size: 16px;
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .emergencia-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+.donar-box i{
+    font-size:55px;
+    color:#d81f26;
+    margin-bottom:15px;
+}
+
+.donar-box h3{
+    color:#d81f26;
+    font-size:24px;
+    margin-bottom:20px;
+    line-height:1.3;
+}
+
+.btn-donar{
+    background:#d81f26;
+    color:white;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-donar:hover{
+    background:#b3151c;
+    
+}
+/* ========================
+   MAPA INTERACTIVO
+======================== */
+
+.mapa-section{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+
+    padding:25px;
+    background:#f5f5f5;
+}
+
+.mapa-box iframe{
+    width:100%;
+    border-radius:10px;
+}
+
+.mapa-info{
+    background:white;
+    border-radius:10px;
+    padding:25px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.mapa-info h3{
+    color:#0b2f66;
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.mapa-info p{
+    color:#555;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.btn-mapa{
+    background:#0c47a1;
+    color:white;
+    text-decoration:none;
+
+    padding:12px 20px;
+    border-radius:8px;
+
+    font-weight:bold;
+    width:max-content;
+}
+
+.btn-mapa:hover{
+    background:#08306d;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .mapa-section{
+        grid-template-columns:1fr;
+    }
+
+}
+/* ==========================
+   NÚMEROS DE EMERGENCIA
+========================== */
+
+.numeros-emergencia{
+    padding:40px 25px;
+    background:white;
+}
+
+.numeros-emergencia h2{
+    text-align:center;
+    font-size:32px;
+    color:#0b2f66;
+    margin-bottom:25px;
+}
+
+.numeros-grid{
+    text-decoration: none;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.numero-card{
+    background:#f5f5f5;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.numero-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+}
+
+.numero-card i{
+    font-size:45px;
+    color:#d81f26;
+    margin-bottom:15px;
+}
+
+.numero-card h3{
+    color:#0b2f66;
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.numero-card p{
+    font-size:28px;
+    font-weight:bold;
+    color:#222;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .numeros-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .numeros-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ======================
+   FOOTER NUEVO
+====================== */
+
+.footer{
+    background:#0b2f66;
+    color:white;
+    margin-top:40px;
+    padding:50px 40px 20px;
+}
+
+/* CONTENIDO */
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+    align-items:start;
+}
+
+/* TITULOS */
+
+.footer-box h3{
+    font-size:20px;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+/* TEXTO */
+
+.footer-box p{
+    color:#d7dce5;
+    line-height:1.7;
+    max-width:350px;
+}
+
+/* LINKS */
+
+.footer-box a{
+    display:block;
+    color:#d7dce5;
+    text-decoration:none;
+    margin-bottom:12px;
+    transition:0.3s;
+}
+
+.footer-box a:hover{
+    color:white;
+    padding-left:6px;
+}
+
+/* ICONOS */
+
+.footer-redes{
+    display:flex;
+    gap:14px;
+    margin-top:15px;
+}
+
+.footer-redes i{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(255,255,255,0.12);
+    font-size:18px;
+
+    transition:.3s;
+    cursor:pointer;
+}
+
+.footer-redes i:hover{
+    background:#d81f26;
+    transform:translateY(-3px);
+}
+
+/* PARTE INFERIOR */
+
+.footer-bottom{
+    margin-top:35px;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,.12);
+
+    text-align:center;
+    font-size:14px;
+    color:#cfd6df;
+}
+
+.linkbotones{
+    text-decoration: none;
+}
+
+.lineabotones{
+    text-decoration: none;
+}
+
+/* NAVBAR */
+.navbar{
+    background:#e31c23;
+
+    display:flex;
+    align-items:center;
+
+    gap:30px;
+
+    padding:18px 35px;
+
+    border-radius:10px;
+
+    width:max-content;
+}
+
+/* LINKS */
+.navbar a{
+    color:white;
+    text-decoration:none;
+
+    font-size:17px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+/* HOVER */
+.navbar a:hover{
+    opacity:.8;
+}
+
+/* LINK ACTIVO */
+.active{
+    border-bottom:3px solid white;
+    padding-bottom:5px;
+}
+
+/* ICONOS */
+.icons{
+    display:flex;
+    align-items:center;
+
+    gap:18px;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+}

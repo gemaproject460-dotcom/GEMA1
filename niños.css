@@ -1,0 +1,326 @@
+/* ================= HEADER ================= */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#022b68;
+    padding:18px 30px;
+}
+
+/* LOGO */
+
+.logo-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-box img{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo-texto h1{
+    color:white;
+    font-size:42px;
+}
+
+.logo-texto p{
+    color:white;
+    font-size:15px;
+    line-height:1.4;
+}
+
+/* NAV */
+
+.nav{
+    background:#d81f26;
+    padding:20px 30px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    border-radius:3px;
+}
+
+.nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:15px;
+    position:relative;
+}
+.nav a:hover{
+    opacity:0.8;
+}
+
+.nav .activo::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    width:100%;
+    height:3px;
+    background:white;
+}
+
+/* ICONOS */
+
+.iconos{
+    display:flex;
+    gap:20px;
+    color:white;
+    font-size:22px;
+    margin-left:10px;
+}
+
+/* 🔵 RESET: elimina márgenes y ajustes por defecto del navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* 🌈 FONDO GENERAL DE LA PÁGINA */
+body {
+  background: linear-gradient(to bottom, #dff6ff, #ffffff);
+  color: #333;
+  text-align: center;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.kids-hero{
+
+    width:90%;
+    margin:40px auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:#f4f8fc;
+
+    padding:50px;
+
+    border-radius:25px;
+
+}
+
+.hero-content{
+
+    max-width:550px;
+
+}
+
+.kids-badge{
+
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    background:#e5effc;
+
+    color:#0E4A8A;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+.hero-content h1{
+
+    font-size:3rem;
+
+    color:#0E4A8A;
+
+    margin:20px 0;
+
+}
+
+.hero-content p{
+
+    color:#555;
+
+    line-height:1.7;
+
+}
+
+.btn-kids{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:#0E4A8A;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 28px;
+
+    border-radius:12px;
+
+}
+
+/* ==========================
+   SECCIONES
+========================== */
+
+.kids-section{
+
+    width:90%;
+    margin:50px auto;
+
+}
+
+.kids-section h2{
+
+    color:#0E4A8A;
+
+    margin-bottom:25px;
+
+}
+
+.kids-section h2 i{
+
+    margin-right:10px;
+
+}
+
+/* ==========================
+   JUEGOS
+========================== */
+
+.games-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+.game-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-decoration:none;
+
+    color:#333;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.game-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.game-card i{
+
+    font-size:2.8rem;
+
+    color:#0E4A8A;
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================
+   FENÓMENOS
+========================== */
+
+.phenomena-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+.phenomena-card{
+
+    background:white;
+
+    padding:25px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.phenomena-card i{
+
+    font-size:2.8rem;
+
+    color:#0E4A8A;
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================
+   CONSEJOS
+========================== */
+
+.tips-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.tip-card{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.tip-card i{
+
+    color:#0E4A8A;
+
+    font-size:1.5rem;
+
+}
